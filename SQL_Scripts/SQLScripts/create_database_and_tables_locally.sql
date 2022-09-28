@@ -13,8 +13,8 @@ CREATE TABLE [dbo].[company_addresses](
 	[street_name] [nvarchar](50) NOT NULL,
 	[street_number] [int] NOT NULL,
 	[apartment_number] [nvarchar](10) NULL,
-	[city] [nvarchar] NOT NULL,
-	[zipcode] [int] NOT NULL
+	[zipcode] [int] NOT NULL,
+	[city] [nvarchar] NOT NULL
 	)
 GO
 
