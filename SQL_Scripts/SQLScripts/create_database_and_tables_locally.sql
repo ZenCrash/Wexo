@@ -75,7 +75,7 @@ CREATE TABLE [dbo].[meeting_rooms](
 GO
 
 CREATE TABLE [dbo].[meetings](
-	[id] [int] PRIMARY KEY NOT NULL,
+	[id] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
 	[meeting_code] [varchar](4) NOT NULL,
 	[meeting_title] [nvarchar](50) NOT NULL,
 	[start_date_time] [datetime] NOT NULL,
