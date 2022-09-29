@@ -35,7 +35,7 @@ CREATE TABLE [dbo].[logins](
 	[salt] [varchar](128) NOT NULL,
 
 	--FK relations
-	CONSTRAINT [FK_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
+	CONSTRAINT [FK_logins_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
 	)
 GO
 
@@ -44,7 +44,7 @@ CREATE TABLE [dbo].[customers](
 	[company_name] [nvarchar](50) NULL,
 
 	--FK relations
-	CONSTRAINT [FK_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
+	CONSTRAINT [FK_customers_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
 	)
 GO
 
@@ -57,8 +57,8 @@ CREATE TABLE [dbo].[employees](
 	[company_address_id] [int] NOT NULL, --FK relation to company_address_id
 
 	--FK relations
-	CONSTRAINT [FK_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE,
-	CONSTRAINT [FK_company_addresses_id] FOREIGN KEY (company_address_id) REFERENCES company_addresses (id)
+	CONSTRAINT [FK_employees_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE,
+	CONSTRAINT [FK_employees_company_addresses_id] FOREIGN KEY (company_address_id) REFERENCES company_addresses (id)
 	)
 GO
 
@@ -70,7 +70,7 @@ CREATE TABLE [dbo].[meeting_rooms](
 	[company_address_id] [int] NOT NULL, --FK relation to company_address_id
 
 	--FK relations
-	CONSTRAINT [FK_company_addresses_id] FOREIGN KEY (company_address_id) REFERENCES company_addresses (id) ON DELETE CASCADE
+	CONSTRAINT [FK_meeting_rooms_company_addresses_id] FOREIGN KEY (company_address_id) REFERENCES company_addresses (id) ON DELETE CASCADE
 	)
 GO
 
@@ -86,7 +86,7 @@ CREATE TABLE [dbo].[meetings](
 	[meeting_room_id] [int] NULL, --FK relation to meeting_room_id
 
 	--FK relations
-	CONSTRAINT [FK_meeting_rooms_id] FOREIGN KEY (meeting_room_id) REFERENCES meeting_rooms (id)
+	CONSTRAINT [FK_meetings_meeting_rooms_id] FOREIGN KEY (meeting_room_id) REFERENCES meeting_rooms (id)
 	)
 GO
 
@@ -95,7 +95,7 @@ CREATE TABLE [dbo].[meetings_people](
 	[meeting_id] [int] NOT NULL,
 	[person_id] [int] NOT NULL,
 
-	CONSTRAINT [FK_meetings_id] FOREIGN KEY (meeting_id) REFERENCES meetings (id) ON DELETE CASCADE,
-	CONSTRAINT [FK_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
+	CONSTRAINT [FK_meetings_people_meetings_id] FOREIGN KEY (meeting_id) REFERENCES meetings (id) ON DELETE CASCADE,
+	CONSTRAINT [FK_meetings_people_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
 	)
 GO
