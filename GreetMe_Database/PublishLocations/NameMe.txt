@@ -1,0 +1,2 @@
+﻿-- create a publishfile and name it: 
+-- GreetMe_Database.publish.xml

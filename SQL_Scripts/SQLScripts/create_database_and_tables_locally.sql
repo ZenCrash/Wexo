@@ -1,11 +1,14 @@
 ﻿/* CREATE WEXO_GREET_ME DATABASE */
 
-CREATE DATABASE [WEXO_GREET_ME]
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'WEXO_Greet_Me')
+	BEGIN
+		CREATE DATABASE [WEXO_Greet_Me];
+	END;
 GO
 
 /* CREATE TABELS dd */
 
-USE [WEXO_GREET_ME]
+USE [WEXO_Greet_Me]
 GO
 
 CREATE TABLE [dbo].[company_addresses](
