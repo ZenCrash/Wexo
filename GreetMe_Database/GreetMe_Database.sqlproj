@@ -67,4 +67,8 @@
     <None Include="PublishLocations\GreetMe_Database.publish.xml" />
     <None Include="Compares\LocalDBCompare.scmp" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="PublishLocations\NameMe.txt" />
+    <Build Include="Compares\NameMe.txt" />
+  </ItemGroup>
 </Project>

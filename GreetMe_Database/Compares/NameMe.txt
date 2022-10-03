@@ -1,0 +1,2 @@
+﻿-- create a schema file and name it: 
+-- LocalDBCompare.scmp
