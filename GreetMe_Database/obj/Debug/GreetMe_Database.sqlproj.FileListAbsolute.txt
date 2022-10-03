@@ -1,0 +1,10 @@
+D:\Github\Wexo\GreetMe_Database\bin\Debug\GreetMe_Database.dacpac
+D:\Github\Wexo\GreetMe_Database\bin\Debug\GreetMe_Database.dll
+D:\Github\Wexo\GreetMe_Database\bin\Debug\GreetMe_Database.pdb
+D:\Github\Wexo\GreetMe_Database\obj\Debug\GreetMe_Database.sqlproj.AssemblyReference.cache
+D:\Github\Wexo\GreetMe_Database\obj\Debug\Model.xml
+D:\Github\Wexo\GreetMe_Database\obj\Debug\refactor.xml
+D:\Github\Wexo\GreetMe_Database\obj\Debug\postdeploy.sql
+D:\Github\Wexo\GreetMe_Database\obj\Debug\predeploy.sql
+D:\Github\Wexo\GreetMe_Database\obj\Debug\GreetMe_Database.dll
+D:\Github\Wexo\GreetMe_Database\obj\Debug\GreetMe_Database.pdb

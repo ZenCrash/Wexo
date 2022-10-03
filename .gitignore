@@ -21,3 +21,10 @@ node_modules/
 *.log
 *.sqlite
 *.suo
+*.dbmdl
+*.jfm
+
+
+/GreetMe_Database/PublishLocations/GreetMe_Database.publish.xml
+/GreetMe_Database/Compares/LocalDBCompare.scmp
+/GreetMe_Database/GreetMe_Database.jfm
