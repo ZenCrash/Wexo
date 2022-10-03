@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jacob\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Stark\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Wexo\\GreetMe_DataAccess\\GreetMe_DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Stark\\Source\\Repos\\ZenCrash\\Wexo\\GreetMe_DataAccess\\GreetMe_DataAccess.csproj",
       "projectName": "GreetMe_DataAccess",
-      "projectPath": "D:\\Github\\Wexo\\GreetMe_DataAccess\\GreetMe_DataAccess.csproj",
-      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Wexo\\GreetMe_DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Stark\\Source\\Repos\\ZenCrash\\Wexo\\GreetMe_DataAccess\\GreetMe_DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Stark\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Stark\\Source\\Repos\\ZenCrash\\Wexo\\GreetMe_DataAccess\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Stark\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -65,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
