@@ -23,7 +23,7 @@ node_modules/
 *.suo
 *.dbmdl
 *.jfm
-
+*.scmp
 
 /GreetMe_Database/PublishLocations/GreetMe_Database.publish.xml
 /GreetMe_Database/Compares/LocalDBCompare.scmp
