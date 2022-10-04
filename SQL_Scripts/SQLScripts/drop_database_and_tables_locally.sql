@@ -1,6 +1,6 @@
 ﻿/* DROP TABLES */
 
-USE [WEXO_Greet_Me]
+USE [WEXO_GreetMe]
 GO
 
 --DROP FK's
@@ -61,5 +61,5 @@ DROP TABLE [dbo].[company_addresses]
 GO
 
 /* DROP WEXO_GREET_ME DATABASE */
-DROP DATABASE [WEXO_Greet_Me];
+DROP DATABASE [WEXO_GreetMe];
 GO
