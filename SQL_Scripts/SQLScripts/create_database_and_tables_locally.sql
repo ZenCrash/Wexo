@@ -26,7 +26,6 @@ CREATE TABLE [dbo].[people](
 	[first_name] [nvarchar](50) NOT NULL,
 	[last_name] [nvarchar](50) NOT NULL,
 	[job_title] [nvarchar](50) NOT NULL,
-	[work_email] [nvarchar](128) NOT NULL,
 	[work_phone_number] [int] NULL
 	)
 GO
@@ -45,6 +44,7 @@ GO
 CREATE TABLE [dbo].[customers](
 	[person_id] [int] PRIMARY KEY NOT NULL, --FK relation to person_id
 	[company_name] [nvarchar](50) NULL,
+	[email] [nvarchar](50) NOT NULL,
 
 	--FK relations
 	CONSTRAINT [FK_customers_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
@@ -62,6 +62,16 @@ CREATE TABLE [dbo].[employees](
 	--FK relations
 	CONSTRAINT [FK_employees_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE,
 	CONSTRAINT [FK_employees_company_addresses_id] FOREIGN KEY (company_address_id) REFERENCES company_addresses (id)
+	)
+GO
+
+CREATE TABLE [dbo].[services](
+	[person_id] [int] PRIMARY KEY NOT NULL, --FK relation to person_id
+	[service] [nvarchar](50) NOT NULL,
+	[email] [nvarchar](50) NOT NULL,
+
+	--FK relations
+	CONSTRAINT [FK_services_people_id] FOREIGN KEY (person_id) REFERENCES people (id) ON DELETE CASCADE
 	)
 GO
 
