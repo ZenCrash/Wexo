@@ -19,6 +19,10 @@ GO
 ALTER TABLE [dbo].[meeting_rooms] DROP CONSTRAINT [FK_meeting_rooms_company_addresses_id]
 GO
 
+	--DROP SERVICES
+ALTER TABLE [dbo].[services] DROP CONSTRAINT [FK_services_people_id]
+GO
+
 	--DROP EMPLOYEES
 ALTER TABLE [dbo].[employees] DROP CONSTRAINT [FK_employees_company_addresses_id]
 GO
@@ -41,7 +45,9 @@ DROP TABLE [dbo].[meetings_people]
 GO
 DROP TABLE [dbo].[meetings]
 GO
-DROP TABLE [dbo].[meeting_rooms]
+DROP TABLE [dbo].[services]
+GO
+DROP TABLE [dbo].[employees]
 GO
 DROP TABLE [dbo].[employees]
 GO
