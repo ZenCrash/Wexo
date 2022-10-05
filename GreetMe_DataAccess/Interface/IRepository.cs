@@ -8,11 +8,14 @@ namespace GreetMe_DataAccess.Interface
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> All();
-        Task<T> GetById(Guid id);
-        Task<IEnumerable<T>> Add(T entity);
-        Task<IEnumerable<T>> Delete(Guid id);
-        Task<IEnumerable<T>> Update(T entity);
+        IEnumerable<T?> GetAll();
+        T? GetById(int id);
+        T Create(T entity);
+        T Update(T entity);
+        void Delete(int id);
+        //Task<IEnumerable<T>> Create(T entity);
+        //Task<IEnumerable<T>> Update(T entity);
+        //Task<IEnumerable<T>> Delete(Guid id);
 
     }
 }

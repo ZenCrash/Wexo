@@ -1,5 +1,6 @@
 ﻿using GreetMe_DataAccess.Interface;
 using GreetMe_DataAccess.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,53 +11,102 @@ namespace GreetMe_DataAccess.Repsitory
 {
     public class PersonRepository : IPersonRepository
     {
-        //ConnectionString
-        private readonly Wexo_GreetMeLocal _dbContext;
-        public PersonRepository(Wexo_GreetMeLocal dbContext)
+        ////ConnectionString
+        private readonly WEXO_GreetMeContext _db;
+        public PersonRepository(WEXO_GreetMeContext db)
         {
-            _dbContext = dbContext;
+            _db = db;
         }
 
+        //-----------------------------------------------------------------------------
+        /* GetAll                                                                    */
+        //-----------------------------------------------------------------------------
 
-
-        public Task<IEnumerable<Person>> Add(Person entity)
+        //GetAll
+        public IEnumerable<Person?> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.People.ToList();
         }
 
-        public Task<IEnumerable<Person>> All()
+        //GetAll Async
+        public async Task<IEnumerable<Person?>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _db.People.ToListAsync();
         }
 
-        public Task<Person> CreatePersonAsync(Person person)
+        //-----------------------------------------------------------------------------
+        /* Get / Read                                                                */
+        //-----------------------------------------------------------------------------
+
+        //GetById
+        public Person? GetById(int id)
         {
-            throw new NotImplementedException();
+            return _db.People.FirstOrDefault(person => person.Id == id);
         }
 
-        public Task<IEnumerable<Person>> Delete(Guid id)
+        //GetById Async
+        public async Task<Person?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.People.FirstOrDefaultAsync(person => person.Id == id);
         }
 
-        public Task<List<Person>> GetAllPeopleAsync()
+        //-----------------------------------------------------------------------------
+        /* Create / Post                                                              */
+        //-----------------------------------------------------------------------------
+
+        //Create
+        public Person Create(Person person)
         {
-            throw new NotImplementedException();
+            _db.People.Add(person);
+            _db.SaveChanges();
+            return person;
         }
 
-        public Task<Person> GetById(Guid id)
+        //Create Async
+         public async Task<Person> CreateAsync(Person person)
         {
-            throw new NotImplementedException();
+            _db.People.Add(person);
+            await _db.SaveChangesAsync();
+            return person;
         }
 
-        public Task<Person> GetPersonByIdAsync(int id)
+        //-----------------------------------------------------------------------------
+        /* Update                                                                    */
+        //-----------------------------------------------------------------------------
+
+        //Update
+        public Person Update(Person person)
         {
-            throw new NotImplementedException();
+            _db.People.Update(person);
+            _db.SaveChanges();
+            return person;
         }
 
-        public Task<IEnumerable<Person>> Update(Person entity)
+        //Update Async
+        public async Task<Person> UpdateAsync(Person person)
         {
-            throw new NotImplementedException();
+            _db.People.Update(person);
+            await _db.SaveChangesAsync();
+            return person;
         }
+
+        //-----------------------------------------------------------------------------
+        /* Delete                                                                    */
+        //-----------------------------------------------------------------------------
+
+        //Delete
+        public void Delete(int id)
+        {
+            _db.People.Remove(_db.People.Find(id));
+            _db.SaveChanges();
+        }
+
+        //Delete Async
+        public async void DeleteAsync(int id)
+        {
+            _db.People.Remove(_db.People.Find(id));
+            _db.SaveChanges();
+        }
+
     }
 }
