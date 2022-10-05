@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GreetMe_DataAccess.Repsitory
+namespace GreetMe_DataAccess.Interface
 {
     public interface IRepository<T> where T : class
     {
