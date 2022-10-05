@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="BusinessLogic\" />
-    <Folder Include="Repsitory\" />
   </ItemGroup>
 
   <ItemGroup>
