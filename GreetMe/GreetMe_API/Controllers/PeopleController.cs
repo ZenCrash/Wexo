@@ -29,11 +29,20 @@ namespace GreetMe_API.Controllers
         //-----------------------------------------------------------------------------
 
         //GetAll
-        [HttpGet(Name = "GetItAll2")]
-        public IEnumerable<Person> Get()
+        [HttpGet(Name = "GetAllPeople")]
+        public IEnumerable<Person> GetAll()
         {
             return _personRepository.GetAll();
         }
+
+
+        //updatede get. only one get method per controller
+        ////GetAll Async
+        //[HttpGet(Name = "GetAllPeopleAsync")]
+        //public async Task<IEnumerable<Person>> GetAllAsync()
+        //{
+        //    return await _personRepository.GetAllAsync();
+        //}
 
         //-----------------------------------------------------------------------------
         /* Get / Read                                                                */
