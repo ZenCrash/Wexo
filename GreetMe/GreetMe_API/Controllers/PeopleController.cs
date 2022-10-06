@@ -29,29 +29,11 @@ namespace GreetMe_API.Controllers
         //-----------------------------------------------------------------------------
 
         //GetAll
-        [HttpGet]
-        public IActionResult GetAllPeople()
+        [HttpGet(Name = "GetItAll2")]
+        public IEnumerable<Person> Get()
         {
-            IEnumerable<Person> people = _personRepository.GetAll();
-            //return Json(people);
-            return View();
+            return _personRepository.GetAll();
         }
-
-        //GetAll Async
-        [HttpGet]
-        public async Task<IActionResult> GetAllPeopleAsync()
-        {
-            IEnumerable<Person> people = await _personRepository.GetAllAsync();
-            //return Json(people);
-            return View();
-        }
-
-        ////With Select
-        //public IActionResult GetAllPeople()
-        //{
-        //    IEnumerable<Person> people = db.People.Select(p => p).ToList();
-        //    return View(people);
-        //}
 
         //-----------------------------------------------------------------------------
         /* Get / Read                                                                */
