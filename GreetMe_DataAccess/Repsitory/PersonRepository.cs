@@ -28,6 +28,18 @@ namespace GreetMe_DataAccess.Repsitory
             return _db.People.ToList();
         }
 
+        ////GetAll with Dep
+        //public IEnumerable<Person?> GetAllWithDep()
+        //{
+        //    IEnumerable<Person> listPeople;
+
+        //    listPeople = _db.People
+        //        .Include(c => c.Customer)
+        //        .Include(e => e.Employee);
+        //    return listPeople;
+
+        //}
+
         //GetAll Async
         public async Task<IEnumerable<Person?>> GetAllAsync()
         {
