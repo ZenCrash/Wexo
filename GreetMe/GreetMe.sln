@@ -6,10 +6,19 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreetMe_DataAccess", "..\GreetMe_DataAccess\GreetMe_DataAccess.csproj", "{A9CBF64C-8F51-496D-914D-06432D0EE43D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{8E154B4D-6C26-4A60-8BB9-C05E928A200A}"
+	ProjectSection(SolutionItems) = preProject
+		DontUseThisProject_UseNewGreetMe.txt = DontUseThisProject_UseNewGreetMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{4162B979-4F7E-43DE-B6A8-08B108D7327C}"
+	ProjectSection(SolutionItems) = preProject
+		DontUseThisProject_UseNewGreetMe.txt = DontUseThisProject_UseNewGreetMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{AE143741-EC13-4266-9E69-EFAB8CBE9E16}"
+	ProjectSection(SolutionItems) = preProject
+		DontUseThisProject_UseNewGreetMe.txt = DontUseThisProject_UseNewGreetMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{FF9C619E-E415-44CB-BD74-74E18A2B85EE}"
 EndProject
@@ -18,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScript", "SQLScript", "{
 		..\SQL_Scripts\SQLScripts\create_database_and_tables_locally.sql = ..\SQL_Scripts\SQLScripts\create_database_and_tables_locally.sql
 		..\SQL_Scripts\SQLScripts\create_database_and_tables_online.sql = ..\SQL_Scripts\SQLScripts\create_database_and_tables_online.sql
 		..\SQL_Scripts\SQLScripts\create_database_locally.sql = ..\SQL_Scripts\SQLScripts\create_database_locally.sql
+		DontUseThisProject_UseNewGreetMe.txt = DontUseThisProject_UseNewGreetMe.txt
 		..\SQL_Scripts\SQLScripts\drop_database_and_tables_locally.sql = ..\SQL_Scripts\SQLScripts\drop_database_and_tables_locally.sql
 		..\SQL_Scripts\SQLScripts\drop_database_and_tables_online.sql = ..\SQL_Scripts\SQLScripts\drop_database_and_tables_online.sql
 	EndProjectSection
@@ -28,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL_Database", "SQL_Databas
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GreetMe_Database", "..\GreetMe_Database\GreetMe_Database.sqlproj", "{1547A9F0-B928-4F7F-AC50-DB059DCDD36D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetMe_API", "GreetMe_API\GreetMe_API.csproj", "{413BB475-F58A-4A98-85B9-9B417C06A5E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreetMe_API", "GreetMe_API\GreetMe_API.csproj", "{413BB475-F58A-4A98-85B9-9B417C06A5E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
